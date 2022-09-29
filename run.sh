@@ -39,6 +39,6 @@ subjectAltName = @alt_names
 IP.1 = $IP
 " > openssl.cnf
 
-openssl req -x509 -nodes -days ${DAYS} -newkey rsa:2048 -keyout key.pem -out cert.pem -config openssl.cnf
+openssl req -x509 -nodes -days "${DAYS}" -newkey rsa:2048 -keyout key.pem -out cert.pem -config openssl.cnf
 rm openssl.cnf
 openssl x509 -noout -text -fingerprint -in cert.pem
