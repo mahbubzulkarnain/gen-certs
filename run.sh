@@ -1,9 +1,8 @@
 #!/bin/sh
 
 IP=$(echo "$1" | grep -E "^[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}$")
-
 if [ ! "$IP" ]; then
-  echo "Need IP"
+  echo "invalid ip format"
   exit 1
 fi
 
